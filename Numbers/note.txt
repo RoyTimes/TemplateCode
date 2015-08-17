@@ -1,0 +1,31 @@
+C++
+
+1. flexibility with parameters
+2. overload would check the return type
+3. extern “C” int fun (int * arg) >> to turn off function type encoding
+4. void * >> very strict type check in C++
+5. Dynamic initialization of Globals
+6. scope operator 
+
+
+
+C++ Cookbook
+
+1. convert string to number {
+	a. strtol strtod strtoul --> defined in cstdlib >> strol("0x12f", &offset, base);
+	b. boost::lexical_cast <int> (str); (also used for validate a type by catching errs)
+}
+
+2. convert numbers to string {
+	1. using stringstream (auto do the scientific notification)
+	2. using boost::format {
+		format f ("This is %x% of the function");
+		f % "boost";
+		
+		cout << f.str();
+		f.clear();
+	}
+}
+
+3. regular expressions --> boost
+4. when clear a vector of pointer delete them first
